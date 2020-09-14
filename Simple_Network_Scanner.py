@@ -4,8 +4,7 @@ Network = "192.168.0."
 
 for i in range(1, 255):
     IP = Network + str(i)
-    #print("Checking IP: %s \n" % IP)
-    p = subprocess.Popen(' ping -c 1 -W 1 ' + IP, stdout=subprocess.PIPE, shell=True)  # the stdout=subprocess.PIPE will hide the output of the ping command
+    p = subprocess.Popen(' ping -c 1 -W 1 ' + IP, stdout=subprocess.PIPE, shell=True)
     p.wait()
 
     if IP == "192.168.0.2":
